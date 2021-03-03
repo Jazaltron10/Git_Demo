@@ -1,3 +1,4 @@
 # Git_Demo
-This is for tutorial purpose 
-learning how to use github with the terminal 
+1. This is for tutorial purpose 
+2. learning how to use github with the bash terminal 
+3. No Code Editor involved
