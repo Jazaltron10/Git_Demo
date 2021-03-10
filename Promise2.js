@@ -8,7 +8,7 @@ const promise = new Promise((resolve,reject)=>{
 
     setTimeout(()=>{
         reject("stay away from the fish");
-    },500)
+    },5000)
 })
 
 
@@ -24,7 +24,7 @@ const promise = new Promise((resolve,reject)=>{
         console.log("Feed the Fish");
     }
     watchFishEat=()=>{
-        console.log("Watch fish eat their food");
+        console.log("Watch the fish eat their food");
     }
     standDoNothing=()=>{
         console.log("Stand there and do nothing");
