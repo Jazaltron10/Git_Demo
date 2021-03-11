@@ -16,7 +16,7 @@ eg1 =()=>{
         reject("Not bringing tacos, food truck not there.");
         },5000)
     
-    })
+    });
     
     const onfulfillment = ( result ) =>{
         //resolve was called 
@@ -30,7 +30,7 @@ eg1 =()=>{
         console.log("Start cooking pasta");
     }
     const arrive =()=>{
-        console.log('i have arrived');
+        console.log('i have arrived\n');
     }
     promise.then(onfulfillment).then(arrive);
     
@@ -41,10 +41,75 @@ eg1 =()=>{
     WHILE 
     reject is a function which when called changes the status of the promise from pending to rejected. */}
 
-    eg1();
+    //eg1();
 
 
     eg2=()=>{
+        const promise1 = new Promise((resolve, reject) => {
+            resolve(`January john is ${45+23} years old`);
+          });
+          
+          promise1.then((value) => {
+            console.log(value+"\n");
+            // expected output: "Success!"
+          });
 
     }
-    eg2();
+   // eg2();
+
+
+    eg3=()=>{
+        new Promise((resolve, reject) => {
+            console.log('Initial');
+        
+            resolve();
+        })
+        .then(() => {
+            throw new Error('Something failed');
+        
+            console.log(`Do this ${8*8}`);
+        })
+        .catch(() => {
+            console.error('Do that');
+        })
+        .then(() => {
+            console.log(`Do this, no matter what happened before: 9*8 = ${9*8}\n`);
+        });
+    }
+
+    //eg3();
+    let arr = new Array("1","2","3","4","5");
+    eg4=()=>{
+        arr1.forEach((item, index) => {
+            console.log(item, index , "\n");
+        })
+    }
+
+    //eg4(arr1);
+
+    const arr2 = ["1","2","3","4","5","4","3","2","1"];
+    
+   eg5=()=>{
+    const doubled = arr2.map((item) => {
+        return item * 2 ;
+    });
+    console.log(doubled);
+   }
+   eg5();
+    /* eg6=()=>{}
+    eg6();
+    
+    eg7=()=>{}
+    eg7();
+    
+    eg8=()=>{}
+    eg8();
+    
+    eg9=()=>{}
+    eg9();
+    
+    eg10=()=>{}
+    eg10();
+    
+    eg11=()=>{}
+    eg11(); */
