@@ -78,6 +78,31 @@ eg1 =()=>{
     }
 
     //eg3();
+
+    eg6=()=>{
+   
+        const promise = new Promise(function(resolve, reject) {
+      
+            console.log("Promise callback");
+      
+            resolve();
+    
+        }).then(function(result) {
+           console.log("Promise callback (.then)");
+        });
+    
+        setTimeout(function() {
+        console.log("event-loop cycle: Promise (fulfilled)", promise)
+        }, 0);
+    
+        console.log("Promise (pending)", promise);
+        }
+        
+        
+        //eg6();
+
+
+
     let arr = new Array("1","2","3","4","5");
     eg4=()=>{
         arr1.forEach((item, index) => {
@@ -95,14 +120,20 @@ eg1 =()=>{
     });
     console.log(doubled);
    }
-   eg5();
-    /* eg6=()=>{}
-    eg6();
+   //eg5();
     
-    eg7=()=>{}
+
+    const aray3 = [2,3,4,5,2,1,2,3]
+    eg7=()=>{
+        const evens = aray3.filter(item =>{
+            return item % 2 === 0;
+        });
+        console.log(evens);
+
+    }
     eg7();
     
-    eg8=()=>{}
+    /*eg8=()=>{}
     eg8();
     
     eg9=()=>{}
