@@ -47,12 +47,12 @@ eg1 =()=>{
     eg2=()=>{
         const promise1 = new Promise((resolve, reject) => {
             resolve(`January john is ${45+23} years old`);
-          });
-          
-          promise1.then((value) => {
+    });
+        
+        promise1.then((value) => {
             console.log(value+"\n");
             // expected output: "Success!"
-          });
+        });
 
     }
    // eg2();
@@ -79,16 +79,14 @@ eg1 =()=>{
 
     //eg3();
 
-    eg6=()=>{
-   
+    eg6=()=>{   
         const promise = new Promise(function(resolve, reject) {
-      
-            console.log("Promise callback");
-      
+
+            console.log("Promise callback");      
             resolve();
     
         }).then(function(result) {
-           console.log("Promise callback (.then)");
+            console.log("Promise callback (.then)");
         });
     
         setTimeout(function() {
@@ -114,12 +112,12 @@ eg1 =()=>{
 
     const arr2 = ["1","2","3","4","5","4","3","2","1"];
     
-   eg5=()=>{
+eg5=()=>{
     const doubled = arr2.map((item) => {
         return item * 2 ;
     });
     console.log(doubled);
-   }
+}
    //eg5();
     
 
@@ -131,11 +129,13 @@ eg1 =()=>{
         console.log(evens);
 
     }
-    eg7();
+    //eg7();
     
-    /*eg8=()=>{}
+    eg8=()=>{
+        console.log(`Hello from javascript`)
+    }
     eg8();
-    
+    /*
     eg9=()=>{}
     eg9();
     
